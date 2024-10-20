@@ -1,0 +1,14 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <ActionBar title="Ranking Global" />
+  <GridLayout>
+    <ListView items="{{ rankings }}">
+      <ListView.itemTemplate>
+        <GridLayout columns="*, *, *" class="ranking-item p-2">
+          <Label text="{{ name }}" col="0" class="ranking-name" />
+          <Label text="{{ '$' + score }}" col="1" class="ranking-score" />
+          <Label text="{{ 'Nivel ' + level }}" col="2" class="ranking-level" />
+        </GridLayout>
+      </ListView.itemTemplate>
+    </ListView>
+  </GridLayout>
+</Page>

@@ -1,0 +1,29 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <ActionBar title="Juego de Finanzas" />
+  <ScrollView>
+    <StackLayout class="p-4">
+      <GridLayout rows="auto, auto" columns="*, *" class="m-b-20">
+        <Label text="{{ playerName }}" row="0" col="0" class="text-lg" />
+        <Label text="{{ 'Dinero: $' + playerMoney }}" row="0" col="1" class="money-label text-right" />
+        <Label text="{{ 'Turno: ' + currentTurn + ' / ' + maxTurns }}" row="1" col="0" class="turn-label" />
+        <Label text="{{ 'Nivel: ' + level.toFixed(1) }}" row="1" col="1" class="level-label text-right" />
+      </GridLayout>
+      
+      <Repeater items="{{ gameActions }}">
+        <Repeater.itemTemplate>
+          <Button text="{{ buttonText }}" tap="{{ onTap }}" class="action-button" />
+        </Repeater.itemTemplate>
+      </Repeater>
+      
+      <Button text="Finalizar Turno" tap="{{ onEndTurn }}" class="-outline m-t-20" />
+      
+      <StackLayout class="educational-tip m-t-20">
+        <Label text="{{ currentTip }}" textWrap="true" />
+      </StackLayout>
+      
+      <StackLayout class="event-card m-t-20" visibility="{{ lastEvent ? 'visible' : 'collapsed' }}">
+        <Label text="{{ lastEvent }}" textWrap="true" />
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+</Page>

@@ -1,0 +1,9 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <ActionBar title="Iniciar Sesión" />
+  <StackLayout class="p-4">
+    <TextField hint="Nombre de usuario" text="{{ username }}" class="input mb-4" />
+    <TextField hint="Contraseña" text="{{ password }}" secure="true" class="input mb-4" />
+    <Button text="Iniciar Sesión" tap="{{ onLogin }}" class="-primary mb-4" />
+    <Button text="Registrarse" tap="{{ onRegister }}" class="-outline" />
+  </StackLayout>
+</Page>

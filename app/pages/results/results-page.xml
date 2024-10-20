@@ -1,0 +1,17 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <ActionBar title="Resultados del Juego" />
+  <ScrollView>
+    <StackLayout class="p-4">
+      <Label text="{{ 'Puntuación Final: $' + finalScore }}" class="text-2xl text-center money-label" />
+      <Label text="{{ 'Nivel Final: ' + level.toFixed(1) }}" class="text-xl text-center level-label m-t-10" />
+      <Label text="{{ 'Lecciones Aprendidas:' }}" class="text-xl m-t-20" />
+      <Repeater items="{{ lessons }}">
+        <Repeater.itemTemplate>
+          <Label text="{{ $value }}" textWrap="true" class="text-md educational-tip m-t-10" />
+        </Repeater.itemTemplate>
+      </Repeater>
+      <Button text="Jugar de Nuevo" tap="{{ onPlayAgain }}" class="action-button m-t-20" />
+      <Button text="Ver Ranking" tap="{{ onViewRanking }}" class="-outline m-t-10" />
+    </StackLayout>
+  </ScrollView>
+</Page>

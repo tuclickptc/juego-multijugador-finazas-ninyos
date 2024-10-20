@@ -1,0 +1,66 @@
+@import '@nativescript/theme/css/core.css';
+@import '@nativescript/theme/css/default.css';
+
+.action-button {
+  background-color: #4CAF50;
+  border-radius: 20;
+  color: white;
+  font-size: 16;
+  font-weight: bold;
+  margin: 5 10;
+}
+
+.event-card {
+  background-color: #FFF9C4;
+  border-radius: 10;
+  margin: 10;
+  padding: 10;
+}
+
+.money-label {
+  font-size: 24;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.level-label {
+  font-size: 18;
+  color: #2196F3;
+}
+
+.turn-label {
+  font-size: 16;
+  color: #FF9800;
+}
+
+.educational-tip {
+  background-color: #E3F2FD;
+  border-radius: 10;
+  margin: 10;
+  padding: 10;
+}
+
+.educational-tip Label {
+  color: #1565C0;
+  font-size: 14;
+  text-align: center;
+}
+
+.ranking-item {
+  background-color: #EEEEEE;
+  border-radius: 5;
+  margin: 5;
+}
+
+.ranking-name {
+  font-weight: bold;
+  color: #333333;
+}
+
+.ranking-score {
+  color: #4CAF50;
+}
+
+.ranking-level {
+  color: #2196F3;
+}
